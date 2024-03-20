@@ -1,0 +1,205 @@
+/*body {*/
+/*    font-family: Arial, sans-serif;*/
+/*    background-color: lightblue;*/
+/*}*/
+
+/*.container {*/
+/*    max-width: 600px;*/
+/*    margin: 0 auto;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*h1 {*/
+/*    text-align: center;*/
+/*}*/
+
+/*form {*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*input[type="text"] {*/
+/*    width: 70%;*/
+/*    padding: 8px;*/
+/*    margin-right: 10px;*/
+/*}*/
+
+/*button {*/
+/*    padding: 8px 20px;*/
+/*    background-color: #007bff;*/
+/*    color: #fff;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*button:hover {*/
+/*    background-color: #0056b3;*/
+/*}*/
+
+/*ul {*/
+/*    list-style-type: none;*/
+/*    padding: 0;*/
+/*}*/
+
+/*li {*/
+/*    margin-bottom: 5px;*/
+/*}*/
+
+/* Reset CSS */
+/* body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+} */
+
+/* General Styles */
+body {
+    background-color: lightgrey;
+    letter-spacing: .02em;
+    line-height: 21px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+h1 {
+    color: darkred;
+}
+
+/* Navigation Styles */
+#nav-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    background: #3D3331;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+
+ul.nav {
+    font-family: Verdana;
+    font-size: 14px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 10px;
+    overflow: auto;
+}
+
+ul.nav li {
+    display: inline;
+}
+
+ul.nav li a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 21px;
+    background: #5F3222;
+    color: #eee;
+    text-align: center;
+    border-top: 2px solid #815444;
+    border-right: 2px solid #3d1000;
+    border-bottom: 2px solid #3d1000;
+    border-left: 2px solid #815444;
+}
+
+ul.nav li a:hover {
+    background: #a37666;
+    color: #000;
+    border-top: 2px solid #815444;
+    border-right: 2px solid #c59888;
+    border-bottom: 2px solid #c59888;
+    border-left: 2px solid #815444;
+}
+
+/* Image Styles */
+.imgs img {
+    border: 5px solid gainsboro;
+}
+
+/* Content Styles */
+.content {
+    margin-top: 10rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    .content {
+        width: 100%;
+    }
+
+    .imgs img {
+        width: 100%;
+    }
+
+    .column {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    ul.nav li a {
+        float: left;
+    }
+
+    .content {
+        width: 80%;
+    }
+
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .column {
+        flex: 1;
+        padding: 0 15px;
+    }
+
+    .column.left {
+        order: 1; /* Order the left column first */
+    }
+
+    .column.right {
+        order: 2; /* Order the right column second */
+    }
+
+    .imgs img {
+        width: 100%;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: #fff;
+    }
+
+    #nav-wrapper {
+        display: none; /* Hide navigation for printing */
+    }
+
+    .content {
+        margin-top: 0;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 80%;
+        color: #777;
+    }
+
+    .imgs img {
+        max-width: 100%; /* Ensure images fit within printable area */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    @page {
+        margin: 1cm; /* Set margin for the printed page */
+    }
+}
+
